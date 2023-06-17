@@ -1,3 +1,4 @@
+all: vect encrypt decrypt
 vect: cli.main.cpp
 g++ -static cli.main.cpp -o vect
 encrypt: cli.e.cpp
