@@ -1,9 +1,18 @@
 ### Vochant Encrypt/Decrypt
 ------
-**V**ochant **Enc**rpt/Decrypt is an easy way to safe your files.When I am free, I will update it.
+**V**ochant **Enc**rpt/Decrypt is a strange way to safe your files.
 
-In newer versions, I will add a lot of new features, and also make the algorithm more secure.
+BUGS:
+1. Found NUL in your file? Try to decrypt it, maybe the file is broken.
+2. Chars each line is different in Windows and \*nix.
 
-Don't be afraid that I will modify the algorithm in newer versions.When I am updating it, I will not delete older algorithms. In encrypted files, two values are telling the program the version of this file's encrypt engine's version. So the program will know your encrypt engine's version easily.
-
-The main part of it is venc.cpp(but its formatting is like a header file), you can use it to create your solve of this engine's interface.The basical solve ( also the standard solve ) is 3 CLI tools named **V**ochant **E**ncrypt **C**LI **T**ools(VECT). vect(.exe) is the main file of VECT, but encrypt(.exe) and decrypt(.exe) is more easily to use.
+USAGE:
+1. Encrypt a file
+ - `vect -e -i <input> -o <output>`
+ - `encrypt <input>`
+2. Decrypt file(s)
+ - `vect -d <input>`
+ - `decrypt <input>`
+3. Encrypt files
+ - `vect -e -i <input1> -i <input2> ... -o <output>`
+ - `encrypt <input1> <input2> ...`
